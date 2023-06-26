@@ -48,18 +48,28 @@ const teamList = [
 
 const container = document.querySelector(".container");
 
+let row = document.createElement("div");
+row.classList.add("row", "row-cols-3","align-items-start", "justify-content-between", "mb-3", "g-3");
+container.append(row);
+
 for (let index = 0; index < teamList.length; index++) {
     console.log(teamList[index]);
+
+
     let newbox = document.createElement("div");
-    container.append(newbox);
+    newbox.classList.add("card", "col-auto","p-2");
+    row.append(newbox);
 
 
     for (const key in teamList[index]) {
+
         console.log(key,teamList[index][key]);
+
         if(key === "img"){
 
             let newImg = document.createElement("img");
             newImg.setAttribute("src",`${teamList[index][key]}`)
+            newImg.classList.add("card-img-top")
             newbox.prepend(newImg)
 
         }

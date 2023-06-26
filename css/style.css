@@ -12,7 +12,21 @@
 }
 
 
+.container{
+    background-color:rgb(205, 166, 205) ;
+                    }          
 
-.container > div{
+
+
+.my-title{
+    color: darkseagreen;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
     margin-bottom: 2rem;
+}
+
+.card{
+    background-color:rgb(195, 205, 166) ;
+    
 }
