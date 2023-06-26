@@ -56,10 +56,22 @@ for (let index = 0; index < teamList.length; index++) {
 
     for (const key in teamList[index]) {
         console.log(key,teamList[index][key]);
-        let newKeyValueDiv = document.createElement("div");
-        newbox.append(newKeyValueDiv);
-        const capitalKey = capitalize(key)
-        newKeyValueDiv.append(`${capitalKey}: ${teamList[index][key]}`)
+        if(key === "img"){
+
+            let newImg = document.createElement("img");
+            newImg.setAttribute("src",`${teamList[index][key]}`)
+            newbox.prepend(newImg)
+
+        }
+
+        else{
+
+            let newKeyValueDiv = document.createElement("div");
+            newbox.append(newKeyValueDiv);
+            const capitalKey = capitalize(key)
+            newKeyValueDiv.append(`${capitalKey}: ${teamList[index][key]}`)
+
+        }
 
     }
     
