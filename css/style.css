@@ -13,13 +13,15 @@
 
 
 .container{
-    background-color:rgb(205, 166, 205) ;
+    background-color:rgb(203, 182, 60) ;
                     }          
 
 
 
 .my-title{
-    color: seagreen;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
+    color: black;
     width: 30%;
     text-align: center;
     margin: 0 auto;
@@ -28,5 +30,9 @@
 
 .card{
     background-color:white ;
+    text-align: center;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
     
 }
