@@ -1,0 +1,7 @@
+// 1. creo un array, e lo inizializzo con i membri del team, come oggetti.
+// 2. ciclo un for per scorrere l'array e ci annido un for-in per scorrere le chiavi degli oggetti
+// 3. creo degli elementi html, e ci stampo le stringhe all'interno;
+
+// BONUS
+// 4. carico l' immagine come tale o usando innerHTML oppure (meglio) set attribute di src con template literal
+// 5. applico classi bootstrap agli elementi html e creo x card
