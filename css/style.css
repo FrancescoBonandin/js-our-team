@@ -19,7 +19,7 @@
 
 
 .my-title{
-    color: darkseagreen;
+    color: seagreen;
     width: 30%;
     text-align: center;
     margin: 0 auto;
@@ -27,6 +27,6 @@
 }
 
 .card{
-    background-color:rgb(195, 205, 166) ;
+    background-color:white ;
     
 }

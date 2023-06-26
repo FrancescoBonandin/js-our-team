@@ -57,7 +57,7 @@ for (let index = 0; index < teamList.length; index++) {
 
 
     let newbox = document.createElement("div");
-    newbox.classList.add("card", "col-auto","p-2");
+    newbox.classList.add("card", "col-auto","p-2","border-0", "rounded-0");
     row.append(newbox);
 
 
@@ -69,7 +69,7 @@ for (let index = 0; index < teamList.length; index++) {
 
             let newImg = document.createElement("img");
             newImg.setAttribute("src",`${teamList[index][key]}`)
-            newImg.classList.add("card-img-top")
+            newImg.classList.add("card-img-top","rounded-0")
             newbox.prepend(newImg)
 
         }
