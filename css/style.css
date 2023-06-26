@@ -13,3 +13,6 @@
 
 
 
+.container > div{
+    margin-bottom: 2rem;
+}

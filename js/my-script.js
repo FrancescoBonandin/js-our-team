@@ -46,12 +46,37 @@ const teamList = [
         
 ]
 
+const container = document.querySelector(".container");
+
 for (let index = 0; index < teamList.length; index++) {
-    console.log(teamList[index])
+    console.log(teamList[index]);
+    let newbox = document.createElement("div");
+    container.append(newbox);
+
 
     for (const key in teamList[index]) {
-        console.log(teamList[index][key])
+        console.log(key,teamList[index][key]);
+        let newKeyValueDiv = document.createElement("div");
+        newbox.append(newKeyValueDiv);
+        const capitalKey = capitalize(key)
+        newKeyValueDiv.append(`${capitalKey}: ${teamList[index][key]}`)
 
     }
     
+}
+
+
+
+
+
+
+
+
+// ---FUNCTIONS----
+
+function capitalize(word){
+    
+    const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+    return capitalizedWord;
+
 }
