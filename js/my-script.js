@@ -46,3 +46,12 @@ const teamList = [
         
 ]
 
+for (let index = 0; index < teamList.length; index++) {
+    console.log(teamList[index])
+
+    for (const key in teamList[index]) {
+        console.log(teamList[index][key])
+
+    }
+    
+}
