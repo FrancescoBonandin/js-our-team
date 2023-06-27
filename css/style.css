@@ -14,7 +14,7 @@
 
 .container{
     background-color:rgb(203, 182, 60) ;
-                    }          
+}          
 
 
 
@@ -35,4 +35,33 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     
+}
+
+.my-container{
+    width: 1000px;
+    margin: 3rem auto;
+
+}
+
+.my-container h2{
+    width: 50%;
+    margin:0 auto;
+}
+
+.my-container form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.my-container form > div{
+    margin-bottom: 1rem;
+}
+
+.my-container label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.my-container button{
+    display: block;
 }

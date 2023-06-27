@@ -52,7 +52,9 @@ let row = document.createElement("div");
 row.classList.add("row", "row-cols-3","align-items-start", "justify-content-between", "mb-3", "g-3");
 container.append(row);
 
-for (let index = 0; index < teamList.length; index++) {
+let index = 0;
+
+while ( index < teamList.length) {
     console.log(teamList[index]);
 
 
@@ -84,9 +86,76 @@ for (let index = 0; index < teamList.length; index++) {
         }
 
     }
-    
+    index++; 
 }
 
+const addTeamMember = document.getElementById("add-team-member");
+
+addTeamMember.addEventListener("submit",function(event){
+    
+    event.preventDefault()
+    
+    const newTeamMemberName = document.getElementById("name").value;
+    const newTeamMemberRole = document.getElementById("role").value;
+    const newTeamMemberImg = document.getElementById("image").value;
+
+    const newMember = {
+        name:null,
+        role:null,
+        img:null
+    }
+
+    for (const key in newMember) {
+
+      if(key == "name") newMember[key] = newTeamMemberName;
+
+      else if(key == "role") newMember[key] = newTeamMemberRole;
+
+      else if (key == "img") newMember[key] = newTeamMemberImg;
+      
+    }
+
+    teamList.push(newMember);
+
+   
+    while ( index < teamList.length) {
+    console.log(teamList[index]);
+
+
+        let newbox = document.createElement("div");
+        newbox.classList.add("card", "col-auto","p-2","border-0", "rounded-0");
+        row.append(newbox);
+
+
+        for (const key in teamList[index]) {
+
+            console.log(key,teamList[index][key]);
+
+            if(key === "img"){
+
+                let newImg = document.createElement("img");
+                newImg.setAttribute("src",`${teamList[index][key]}`)
+                newImg.classList.add("card-img-top","rounded-0")
+                newbox.prepend(newImg)
+
+            }
+
+            else{
+
+                let newKeyValueDiv = document.createElement("div");
+                newbox.append(newKeyValueDiv);
+                const capitalKey = capitalize(key)
+                newKeyValueDiv.append(`${capitalKey}: ${teamList[index][key]}`)
+
+            }
+
+        }
+
+        index++; 
+        
+    }
+
+})
 
 
 
